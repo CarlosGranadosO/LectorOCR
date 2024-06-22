@@ -1,12 +1,11 @@
 from PIL import Image
 import pytesseract
-#import tesseract
 import numpy as np
 from deep_translator import GoogleTranslator
 
 ######
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\USER\AppData\Local\Tesseract-OCR\tesseract.exe'
-filename = 'image_04.png'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\USER\AppData\Local\Tesseract-OCR\tesseract.exe'#en este caso tienes que poner la ruta que tu tengas
+filename = 'image_04.png' #tienes que tener la imagen en el mismo folder 
 img1 = np.array(Image.open(filename))
 text = pytesseract.image_to_string(img1)
 
